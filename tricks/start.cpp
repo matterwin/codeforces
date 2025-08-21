@@ -1,4 +1,4 @@
-#include <iostream>
+#include <cstdio>
 using namespace std;
 
 void solve()
@@ -9,7 +9,7 @@ void solve()
 int main()
 {
   int t;
-  cin >> t;
+  scanf("%d",&t);
   while (t--) solve();
   return 0;
 }
