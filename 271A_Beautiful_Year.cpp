@@ -1,5 +1,5 @@
-#include <cstdio>
 #include <bits/stdc++.h>
+#include <cstdio>
 #include <stdio.h>
 using namespace std;
 #define fast           ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -21,18 +21,32 @@ using namespace std;
 #define prv1d(vec) for (const auto& x : vec) std::cout << x << " "; std::cout << "\n";
 #define prv2d(vec2d) do { for (const auto& row : vec2d) { for (const auto& x : row) std::cout << x << " "; std::cout << "\n"; } } while(0)
 
-void solve()
-{
-
-}
-
 int main()
 {
-  fast;
-  int t;
-  scanf("%d",&t); 
-  while (t--) solve();
-  return 0;
+    fast;
+    int y;
+    scanf("%d",&y); 
+
+    int freq[10] = {0};
+    int x = y;
+    while (x)
+    {
+        int rhs = x % 10;
+        printf("%d\t", rhs);
+        x /= 10;
+        printf("%d\n", x);
+        freq[rhs]++;
+    }
+
+    prv1d(freq)
+
+    while (1) 
+    {
+
+        break; 
+    }
+    printf("%d\n",y); 
 }
+
 
 

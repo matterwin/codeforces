@@ -1,5 +1,6 @@
-#include <cstdio>
+#include <algorithm>
 #include <bits/stdc++.h>
+#include <cstdio>
 #include <stdio.h>
 using namespace std;
 #define fast           ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -21,18 +22,26 @@ using namespace std;
 #define prv1d(vec) for (const auto& x : vec) std::cout << x << " "; std::cout << "\n";
 #define prv2d(vec2d) do { for (const auto& row : vec2d) { for (const auto& x : row) std::cout << x << " "; std::cout << "\n"; } } while(0)
 
-void solve()
-{
-
-}
-
 int main()
 {
-  fast;
-  int t;
-  scanf("%d",&t); 
-  while (t--) solve();
-  return 0;
+    fast;
+    int n;
+    scanf("%d", &n);
+
+    int mx_cap = 0;
+    int cur_cap = 0;
+    int in = 0, out = 0;
+    while (n--)
+    {
+        sci(out); 
+        cur_cap -= out; 
+        sci(in);
+        cur_cap += in;
+        mx_cap = max(mx_cap, cur_cap);
+    }
+
+    printf("%d\n", mx_cap);
 }
+
 
 
